@@ -1,10 +1,18 @@
 class Zoo:
-    def get_ticket_price(self, age):
-        if 0 < age <= 12:
-            return 50
-        elif 13 <= age < 20:
-            return 100
-        elif 21 < age <= 60:
-            return 150
-        elif age >= 60:
-            return 100
+    def get_ticket_price(self, age): #S1
+        if 0 <= age <= 12:   #S2
+            return 50   #S3
+        elif 13 <= age <= 20:   #S4
+            return 100   #S5
+        elif 21 <= age <= 60:   #S6
+            return 150  #S7
+        elif age > 60:  #S8
+            return 100  #S9
+        elif age <0:
+            return "Invalid age"
+zoo=Zoo()
+print(zoo.get_ticket_price(-1))
+print(zoo.get_ticket_price(5))
+print(zoo.get_ticket_price(15))
+print(zoo.get_ticket_price(55))
+print(zoo.get_ticket_price(70))
